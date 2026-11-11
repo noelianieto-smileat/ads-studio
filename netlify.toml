@@ -3,3 +3,6 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # The Supabase anon key is public by design (NEXT_PUBLIC_ vars are inlined
+  # into the client bundle), so exclude it from Netlify secrets scanning.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY"

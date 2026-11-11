@@ -1,9 +1,10 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabase/env'
 import { NextResponse, type NextRequest } from 'next/server'
 const PUBLIC = ['/login', '/auth/callback']
 export async function middleware(req: NextRequest) {
   let res = NextResponse.next({ request: req })
-  const sb = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
+  const sb = createServerClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     cookies: {
       getAll: () => req.cookies.getAll(),
       setAll: (c: { name: string; value: string; options: CookieOptions }[]) => { c.forEach(({ name, value }) => req.cookies.set(name, value)); res = NextResponse.next({ request: req }); c.forEach(({ name, value, options }) => res.cookies.set(name, value, options)) },
