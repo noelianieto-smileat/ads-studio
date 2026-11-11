@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:wght@800;900&display=swap');
+:root{--font-nunito:'Nunito';--font-mont:'Montserrat';--pr:#00A2E1;--navy:#003F6D;--pink:#FE2675;--green:#92B436;--orange:#FE8100;--purple:#6A1E93;--yellow:#FDCD2B;--ln:#D3ECF8;--mu:#5b6b7a}
 :root{--pr:#00A2E1;--navy:#003F6D;--pink:#FE2675;--green:#92B436;--orange:#FE8100;--purple:#6A1E93;--yellow:#FDCD2B;--ln:#D3ECF8;--mu:#5b6b7a}
 *{box-sizing:border-box}body{margin:0;background:#fff;color:var(--navy);font-family:var(--font-mont),system-ui,sans-serif;line-height:1.5}
 h1,h2,h3{font-family:var(--font-nunito),system-ui,sans-serif;font-weight:900;margin:0}h2{color:var(--pr);font-size:28px}
