@@ -2,6 +2,8 @@
 
 Herramienta interna de creatividades para Paid Media. Next.js 14 + TypeScript + Supabase (auth, base de datos, almacenamiento privado) + Google OAuth restringido a `@smileat.com`.
 
+Última actualización de despliegue: diagnóstico seguro de configuración de Supabase en el acceso con Google.
+
 ## Estado
 | Estado | Qué |
 |---|---|
