@@ -66,7 +66,7 @@ Despliegue en Vercel: Import Project → elige el repositorio → añade las var
 
 ## Actualizar contenido
 - **Productos:** Productos y recursos → importar fotos (nombre de archivo = nombre del producto).
-- **Manuales y recursos:** tabla `brand_docs` y bucket `brand` (gestión por admin; interfaz en la siguiente fase). Se usa la fila con `is_current = true`.
+- **Manuales y recursos:** tabla `brand_docs` y bucket `brand` (gestión por admin; interfaz en la siguiente fase). Se usa la fila con `is_current = true`. 
 
 ## Cargar los productos desde el export de Shopify
 **Opción A, sin instalar nada:** Productos y recursos → «Importar desde el CSV de Shopify» → sube el CSV. Quita los productos de Portugal (SKU `PT-`), mantiene packs/promos/regalos y descarga la foto en posición 1. Si el servidor de imágenes de Shopify no permite la descarga desde el navegador, la herramienta lo indica y se suben esas fotos a mano con «Importar varios productos». Revisa que la foto sea el envase y no una foto de ambiente.
