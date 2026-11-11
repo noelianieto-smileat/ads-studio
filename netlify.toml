@@ -3,3 +3,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # The Supabase URL and anon key are public by design: Next.js inlines
+  # NEXT_PUBLIC_* values into the browser bundle, and Supabase relies on
+  # Row Level Security, not on keeping the anon key secret. Exclude them
+  # from secrets scanning so the build isn't blocked. Never put the
+  # service_role key in a NEXT_PUBLIC_ variable.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL"
