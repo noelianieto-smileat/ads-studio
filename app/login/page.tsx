@@ -23,11 +23,15 @@ function Login() {
     }
   }
   return (
-    <div className="login"><div className="card" style={{ padding: 32 }}>
-      <h2>SMILEAT ADS STUDIO</h2><p>Herramienta interna de Marketing.</p>
-      {err === 'domain' && <p style={{ color: '#C0264B' }}>Solo se permiten cuentas @smileat.com.</p>}
-      {diagnostic && <p role="alert" style={{ color: '#C0264B', marginTop: 16 }}>{diagnostic}</p>}
+    <div className="login"><div className="login-card">
+      <img className="logo" src="/brand/smileat-azul.svg" alt="Smileat" />
+      <h1>Ads Studio</h1>
+      <div className="chars" aria-hidden="true">{[0, 1, 2, 3, 4, 5].map((i) => <img key={i} src={`/brand/personaje-${i}.png`} alt="" />)}</div>
+      <p>Herramienta interna de Marketing para crear creatividades.</p>
+      {err === 'domain' && <p className="err">Solo se permiten cuentas @smileat.com.</p>}
+      {diagnostic && <p role="alert" className="err">{diagnostic}</p>}
       <button className="btn big" onClick={go}>Entrar con Google</button>
+      <small>Acceso solo con cuenta @smileat.com</small>
     </div></div>
   )
 }
